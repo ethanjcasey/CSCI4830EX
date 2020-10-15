@@ -1,0 +1,9 @@
+for f in "$1"/* do
+  if [ -f "$f" ]; then
+    SIZE="$(du -sh "${f}" | cut -f1)"
+    WORD="$(we -2 "$f" | cut -d' ' -f1"
+    echo "Processing $f file..."
+    echo "Size: $SIZE"
+    echo"Word Count: $WORD"
+  fi
+done
